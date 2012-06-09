@@ -14,4 +14,8 @@ Bundle 'derekwyatt/vim-scala'
 Bundle 'jiangmiao/simple-javascript-indenter'
 Bundle 'toggle_words.vim'
 Bundle 'YankRing.vim'
+Bundle 'Align'
+Bundle 'surround.vim'
+Bundle 'Gundo'
+Bundle 'mileszs/ack.vim'
 

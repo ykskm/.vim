@@ -1,0 +1,33 @@
+* スニペット補完を積極的に使うこと
+    * 対応する } がないとclang_completeがうまくいかない時がある模様
+
+* Align http://nanasi.jp/articles/vim/align/align_vim_mapa.html#id4
+    * vmap \tX  でXを基準に整形する
+        * Xは , = : などの記号。個別定義なので何でもいいわけではない
+    * vmap \tsp でスペースで整形
+    * vmap \tab でTABで整形
+    * vmap \adec で変数宣言っぽい複数行をよしなに整形する
+    * :AlignCtrl で整形位置の右寄せ、左寄せ、センタリングなどができる
+        * 左寄せで,で整形
+        :AlignCtrl l
+        :Align ,
+
+* text-object
+    * da( で()自体まで削除
+    * ci" で""内を消して挿入モードに入る
+
+* surround.vim
+    * text-objectを拡張して、外側の() ""などを対象に操作できる
+    * ds" 外側の""を消す
+    * cs'" ''から""に置換
+    * ysw" 単語を""で囲う
+    * ys$( 行末までを()で囲う
+    * vmap s( 選択範囲をsで囲う
+
+* :GundoToggle
+    * Undoツリーを見られる
+
+* Ack
+    * :Ack pattern で全ファイルにgrepする vimgrepより速いと思われる
+    * ackコマンドを使用 Ubuntuだとack-grepという名前
+

@@ -63,3 +63,6 @@ let g:toggle_words_dict = {'*': [['width', 'height'], ['月', '火', '水', '木
 
 " simple-javascript-indenter
 let g:SimpleJsIndenter_BriefMode = 1
+
+" ack.vim
+let g:ackprg = "ack-grep -H --nocolor --nogroup --column"
