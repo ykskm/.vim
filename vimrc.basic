@@ -1,6 +1,5 @@
 set viminfo='50,\"100,:50,n~/.viminfo
 set noswapfile
-set nocompatible
 
 set number
 set nolist
@@ -45,10 +44,6 @@ au WinEnter * setlocal cursorline
 au WinLeave * setlocal nocursorline
 
 au FileType * set formatoptions-=ro
-
-filetype on
-filetype indent on
-filetype plugin on
 
 " default values, which are overridden by filetyps
 set expandtab
