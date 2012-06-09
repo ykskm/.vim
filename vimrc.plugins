@@ -20,6 +20,15 @@ inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
 command! -nargs=? Nes NeoComplCacheEditSnippets <args>
 
+" clang_complete
+let g:clang_complete_auto = 1
+let g:clang_use_library = 1
+let g:clang_library_path = '/usr/lib'
+let g:clang_user_options = '2>/dev/null || exit 0'
+
+" neocomplcache-clang_complete
+let g:neocomplcache_force_overwrite_completefunc = 1
+
 " unite.vim
 let g:unite_enable_start_insert = 1
 
