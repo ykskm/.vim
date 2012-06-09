@@ -6,6 +6,7 @@ Bundle 'teramako/jscomplete-vim'
 Bundle 'Shougo/unite.vim'
 Bundle 'h1mesuke/unite-outline'
 
+Bundle 'fuenor/qfixhowm'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'jiangmiao/simple-javascript-indenter'
 Bundle 'toggle_words.vim'
