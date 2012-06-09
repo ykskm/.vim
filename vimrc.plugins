@@ -1,0 +1,56 @@
+" neocomplcache
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_smart_case = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+let g:neocomplcache_enable_auto_select = 1
+let g:neocomplcache_max_list = 10
+let g:neocomplcache_dictionary_filetype_lists = {
+            \ 'default': '',
+            \ 'javascript': $HOME . '/.vim/dict/javascript.dict',
+            \ }
+let g:neocomplcache_snippets_dir = $HOME . '/.vim/snippets'
+
+imap <silent><C-l> <Plug>(neocomplcache_snippets_expand)
+smap <silent><C-l> <Plug>(neocomplcache_snippets_expand)
+inoremap <expr><C-j> neocomplcache#complete_common_string()
+inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplcache#close_popup()
+inoremap <expr><C-e>  neocomplcache#cancel_popup()
+command! -nargs=? Nes NeoComplCacheEditSnippets <args>
+
+" unite.vim
+let g:unite_enable_start_insert = 1
+
+nnoremap <leader>b :Unite buffer<CR>
+nnoremap <leader>f :Unite file<CR>
+nnoremap <leader>c :UniteWithBufferDir file<CR>
+nnoremap <leader>m :Unite file_mru<CR>
+nnoremap <leader>M :Unite mark<CR>
+nnoremap <leader>o :Unite outline<CR>
+
+" QFixHowm
+let QFixHowm_Key = 'g'
+let howm_dir = $HOME . "/howm"
+let QFixHowm_FileType = 'howm_memo.markdown'
+let QFixHowm_MruFile = howm_dir.'/.howm-mru'
+let QFixHowm_MruFileMax = 100
+let QFixHowm_keywordfile = howm_dir.'/.howm-keys'
+let QFixHowm_QuickMemoFile = 'QuickMemo.howm'
+let QFixHowm_UseAutoLinkTags = 1
+let QFixHowm_TagsDir = howm_dir
+let QFixHowm_SaveTime = 1
+let QFixHowm_DiaryFile = 'Diary/%Y/%m/%Y-%m-%d.howm'
+inoremap <C-d> <C-r>=strftime('[%Y-%m-%d]')<CR>
+inoremap <C-t> <C-r>=strftime('[%Y-%m-%d %H:%M]')<CR>
+
+" vim-ref
+nnoremap <leader>e :Ref alc 
+
+" toggle_word
+nnoremap ,a :ToggleWord<CR>
+let g:toggle_words_dict = {'*': [['width', 'height'], ['月', '火', '水', '木', '金', '土', '日']]}
+
+" simple-javascript-indenter
+let g:SimpleJsIndenter_BriefMode = 1

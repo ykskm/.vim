@@ -1,0 +1,25 @@
+"
+" Detect file type
+"
+au! BufRead,BufNewFile .vimperatorrc setfiletype vimperator
+au! BufRead,BufNewFile .pentadactylrc setfiletype vimperator
+au! BufRead,BufNewFile *.scala setfiletype scala
+au! BufRead,BufNewFile *.md setfiletype markdown
+
+" 
+" File type configs
+"
+
+" Default
+au Filetype * :setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab smartindent
+
+au Filetype html :setlocal tabstop=2 softtabstop=2 shiftwidth=2
+au Filetype xhtml :setlocal tabstop=2 softtabstop=2 shiftwidth=2
+au Filetype xml :setlocal tabstop=2 softtabstop=2 shiftwidth=2
+au Filetype css :setlocal tabstop=4 softtabstop=4 shiftwidth=4
+au Filetype javascript :setlocal tabstop=4 softtabstop=4 shiftwidth=4
+au Filetype scala :setlocal tabstop=2 softtabstop=2 shiftwidth=2
+au Filetype ant :setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
+au Filetype howm_memo :setlocal tabstop=4 softtabstop=4 shiftwidth=4
+

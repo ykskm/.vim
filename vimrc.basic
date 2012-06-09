@@ -1,0 +1,59 @@
+set viminfo='50,\"100,:50,n~/.viminfo
+set noswapfile
+set nocompatible
+
+set number
+set nolist
+set showmatch
+set wrap
+set laststatus=2
+set showcmd
+set cursorline
+set statusline=%n:\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%y\ %=%l,%c%V%8P
+set pumheight=10
+syntax on
+
+set fileformats=unix,dos,mac
+set backspace=2
+set hidden
+
+set ignorecase
+set wrapscan
+set hlsearch
+
+set vb t_vb= 
+
+nnoremap j gj
+nnoremap k gk
+
+inoremap <C-@> <C-[>
+
+nnoremap <Esc><Esc> :<C-u>set nohlsearch<Return>:ccl<Return>
+nnoremap / :<C-u>set hlsearch<Return>/
+nnoremap ? :<C-u>set hlsearch<Return>?
+nnoremap * :<C-u>set hlsearch<Return>*
+nnoremap # :<C-u>set hlsearch<Return>#
+
+nnoremap <leader>a :ls<CR>:buf 
+nnoremap <leader>k :silent :make<CR>
+
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+
+" enable cursorline only in active window
+au WinEnter * setlocal cursorline
+au WinLeave * setlocal nocursorline
+
+au FileType * set formatoptions-=ro
+
+filetype on
+filetype indent on
+filetype plugin on
+
+" default values, which are overridden by filetyps
+set expandtab
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+set smartindent
+
