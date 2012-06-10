@@ -67,3 +67,9 @@ let g:ackprg = "ack-grep -H --nocolor --nogroup --column"
 " EasyMotion
 nnoremap <leader>j :call EasyMotion#JK(0, 0)<CR>
 nnoremap <leader>k :call EasyMotion#JK(0, 1)<CR>
+
+" Syntastic
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_mode_map = { 'mod': 'active',
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': ['scala'] }
