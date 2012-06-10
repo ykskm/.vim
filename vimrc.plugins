@@ -54,9 +54,6 @@ let QFixHowm_DiaryFile = 'Diary/%Y/%m/%Y-%m-%d.howm'
 inoremap <C-d> <C-r>=strftime('[%Y-%m-%d]')<CR>
 inoremap <C-t> <C-r>=strftime('[%Y-%m-%d %H:%M]')<CR>
 
-" vim-ref
-nnoremap <leader>e :Ref alc 
-
 " toggle_word
 nnoremap ,a :ToggleWord<CR>
 let g:toggle_words_dict = {'*': [['width', 'height'], ['月', '火', '水', '木', '金', '土', '日']]}
@@ -66,3 +63,7 @@ let g:SimpleJsIndenter_BriefMode = 1
 
 " ack.vim
 let g:ackprg = "ack-grep -H --nocolor --nogroup --column"
+
+" EasyMotion
+nnoremap <leader>j :call EasyMotion#JK(0, 0)<CR>
+nnoremap <leader>k :call EasyMotion#JK(0, 1)<CR>
