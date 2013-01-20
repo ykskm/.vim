@@ -9,16 +9,19 @@ let g:neocomplcache_dictionary_filetype_lists = {
             \ 'default': '',
             \ 'javascript': $HOME . '/.vim/dict/javascript.dict',
             \ }
-let g:neocomplcache_snippets_dir = $HOME . '/.vim/snippets'
 
-imap <silent><C-l> <Plug>(neocomplcache_snippets_expand)
-smap <silent><C-l> <Plug>(neocomplcache_snippets_expand)
 inoremap <expr><C-j> neocomplcache#complete_common_string()
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplcache#close_popup()
 inoremap <expr><C-e>  neocomplcache#cancel_popup()
-command! -nargs=? Nes NeoComplCacheEditSnippets <args>
+
+" neosnippet
+let g:neosnippet#snippets_directory = $HOME . '/.vim/snippets'
+
+imap <silent><C-l> <Plug>(neosnippet_expand_or_jump)
+smap <silent><C-l> <Plug>(neosnippet_expand_or_jump)
+command! -nargs=? Nes NeoSnippetEdit <args>
 
 " clang_complete
 let g:clang_complete_auto = 1

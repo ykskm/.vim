@@ -1,7 +1,7 @@
 Bundle 'gmarik/vundle'
 
 Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/neocomplcache-snippets-complete'
+Bundle 'Shougo/neosnippet'
 Bundle 'teramako/jscomplete-vim'
 Bundle 'Rip-Rip/clang_complete'
 Bundle 'Shougo/neocomplcache-clang_complete'
