@@ -20,4 +20,5 @@ Bundle 'Gundo'
 Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/syntastic'
+Bundle 'tpope/vim-fugitive'
 

@@ -76,3 +76,7 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_mode_map = { 'mod': 'active',
             \ 'active_filetypes': [],
             \ 'passive_filetypes': ['scala'] }
+
+" fugitive.vim
+set statusline=%n:\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%y%{fugitive#statusline()}\ %=%l,%c%V%8P
+
