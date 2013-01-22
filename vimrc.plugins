@@ -35,12 +35,12 @@ let g:neocomplcache_force_overwrite_completefunc = 1
 " unite.vim
 let g:unite_enable_start_insert = 1
 
-nnoremap <leader>b :Unite buffer<CR>
-nnoremap <leader>f :Unite file<CR>
-nnoremap <leader>c :UniteWithBufferDir file<CR>
-nnoremap <leader>m :Unite file_mru<CR>
-nnoremap <leader>M :Unite mark<CR>
-nnoremap <leader>o :Unite outline<CR>
+nnoremap <leader>b :<C-u>Unite buffer<CR>
+nnoremap <leader>f :<C-u>Unite file<CR>
+nnoremap <leader>c :<C-u>UniteWithBufferDir file<CR>
+nnoremap <leader>m :<C-u>Unite file_mru<CR>
+nnoremap <leader>M :<C-u>Unite mark<CR>
+nnoremap <leader>o :<C-u>Unite outline<CR>
 
 " vim-unite-ack
 let g:unite_source_ack_command = "ack --nocolor --nogroup"
@@ -92,8 +92,8 @@ let g:SimpleJsIndenter_BriefMode = 1
 let g:ackprg = "ack-grep -H --nocolor --nogroup --column"
 
 " EasyMotion
-nnoremap <leader>j :call EasyMotion#JK(0, 0)<CR>
-nnoremap <leader>k :call EasyMotion#JK(0, 1)<CR>
+nnoremap <leader>j :<C-u>call EasyMotion#JK(0, 0)<CR>
+nnoremap <leader>k :<C-u>call EasyMotion#JK(0, 1)<CR>
 
 " Syntastic
 let g:syntastic_auto_loc_list = 1
