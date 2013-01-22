@@ -42,6 +42,30 @@ nnoremap <leader>m :Unite file_mru<CR>
 nnoremap <leader>M :Unite mark<CR>
 nnoremap <leader>o :Unite outline<CR>
 
+" vim-unite-ack
+let g:unite_source_ack_command = "ack --nocolor --nogroup"
+
+function! s:escape_visual(...) "{{{
+    let escape = a:0 ? a:1 : ''
+    normal `<
+    let s = col('.') - 1
+    normal `>
+    let e = col('.') - 1
+    let line = getline('.')
+    let pat = line[s : e]
+    return escape(pat, escape)
+endfunction"}}}
+function! s:visual_unite_input() "{{{
+    return s:escape_visual(" ")
+endfunction"}}}
+function! s:visual_unite_arg() "{{{
+    return s:escape_visual(' :\')
+endfunction"}}}
+
+nnoremap <leader>s :<C-u>Unite ack::
+nnoremap <leader>S :<C-u>exe "Unite -buffer-name=ack ack::" . escape(expand('<cword>'),' :\')<CR>
+vnoremap <leader>s :<C-u>exe "Unite -buffer-name=ack ack::" . <SID>visual_unite_arg()<CR>
+
 " QFixHowm
 let QFixHowm_Key = 'g'
 let howm_dir = $HOME . "/howm"

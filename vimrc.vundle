@@ -8,6 +8,7 @@ Bundle 'Shougo/neocomplcache-clang_complete'
 
 Bundle 'Shougo/unite.vim'
 Bundle 'h1mesuke/unite-outline'
+Bundle 't9md/vim-unite-ack'
 
 Bundle 'fuenor/qfixhowm'
 Bundle 'derekwyatt/vim-scala'
