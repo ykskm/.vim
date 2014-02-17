@@ -4,7 +4,7 @@ Bundle 'Shougo/neocomplete'
 Bundle 'Shougo/neosnippet'
 
 Bundle 'Shougo/unite.vim'
-Bundle 'h1mesuke/unite-outline'
+Bundle 'Shougo/unite-outline'
 Bundle 't9md/vim-unite-ack'
 
 Bundle 'derekwyatt/vim-scala'
