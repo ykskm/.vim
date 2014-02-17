@@ -1,6 +1,6 @@
 Bundle 'gmarik/vundle'
 
-Bundle 'Shougo/neocomplcache'
+Bundle 'Shougo/neocomplete'
 Bundle 'Shougo/neosnippet'
 
 Bundle 'Shougo/unite.vim'
