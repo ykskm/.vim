@@ -22,15 +22,6 @@ imap <silent><C-l> <Plug>(neosnippet_expand_or_jump)
 smap <silent><C-l> <Plug>(neosnippet_expand_or_jump)
 command! -nargs=? Nes NeoSnippetEdit <args>
 
-" clang_complete
-let g:clang_complete_auto = 1
-let g:clang_use_library = 1
-let g:clang_library_path = '/usr/lib'
-let g:clang_user_options = '2>/dev/null || exit 0'
-
-" neocomplcache-clang_complete
-let g:neocomplcache_force_overwrite_completefunc = 1
-
 " unite.vim
 let g:unite_enable_start_insert = 1
 
@@ -65,21 +56,6 @@ nnoremap <leader>s :<C-u>Unite ack::
 nnoremap <leader>S :<C-u>exe "Unite -buffer-name=ack ack::" . escape(expand('<cword>'),' :\')<CR>
 vnoremap <leader>s :<C-u>exe "Unite -buffer-name=ack ack::" . <SID>visual_unite_arg()<CR>
 
-" QFixHowm
-let QFixHowm_Key = 'g'
-let howm_dir = $HOME . "/howm"
-let QFixHowm_FileType = 'howm_memo.markdown'
-let QFixHowm_MruFile = howm_dir.'/.howm-mru'
-let QFixHowm_MruFileMax = 100
-let QFixHowm_keywordfile = howm_dir.'/.howm-keys'
-let QFixHowm_QuickMemoFile = 'QuickMemo.howm'
-let QFixHowm_UseAutoLinkTags = 1
-let QFixHowm_TagsDir = howm_dir
-let QFixHowm_SaveTime = 1
-let QFixHowm_DiaryFile = 'Diary/%Y/%m/%Y-%m-%d.howm'
-inoremap <C-d> <C-r>=strftime('[%Y-%m-%d]')<CR>
-inoremap <C-t> <C-r>=strftime('[%Y-%m-%d %H:%M]')<CR>
-
 " toggle_word
 nnoremap ,a :ToggleWord<CR>
 let g:toggle_words_dict = {'*': [['width', 'height'], ['月', '火', '水', '木', '金', '土', '日']]}
@@ -93,12 +69,6 @@ let g:ackprg = "ack-grep -H --nocolor --nogroup --column"
 " EasyMotion
 nnoremap <leader>j :<C-u>call EasyMotion#JK(0, 0)<CR>
 nnoremap <leader>k :<C-u>call EasyMotion#JK(0, 1)<CR>
-
-" Syntastic
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_mode_map = { 'mode': 'active',
-            \ 'active_filetypes': [],
-            \ 'passive_filetypes': ['scala'] }
 
 " fugitive.vim
 set statusline=%n:\ %<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%y%{fugitive#statusline()}\ %=%l,%c%V%8P
