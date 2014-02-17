@@ -2,15 +2,11 @@ Bundle 'gmarik/vundle'
 
 Bundle 'Shougo/neocomplcache'
 Bundle 'Shougo/neosnippet'
-Bundle 'teramako/jscomplete-vim'
-Bundle 'Rip-Rip/clang_complete'
-Bundle 'Shougo/neocomplcache-clang_complete'
 
 Bundle 'Shougo/unite.vim'
 Bundle 'h1mesuke/unite-outline'
 Bundle 't9md/vim-unite-ack'
 
-Bundle 'fuenor/qfixhowm'
 Bundle 'derekwyatt/vim-scala'
 Bundle 'jiangmiao/simple-javascript-indenter'
 Bundle 'toggle_words.vim'
