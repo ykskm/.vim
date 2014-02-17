@@ -18,3 +18,5 @@ Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'tpope/vim-fugitive'
 
+Bundle 'nanotech/jellybeans.vim'
+Bundle 'w0ng/vim-hybrid'
