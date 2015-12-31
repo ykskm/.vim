@@ -1,4 +1,4 @@
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/neosnippet'
