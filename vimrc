@@ -5,10 +5,11 @@ set runtimepath+=~/.vim/after
 source ~/.vimrc.local.before
 
 filetype off " temporal for vundle
-set runtimepath+=~/.vim/vundle/
-call vundle#rc()
+set runtimepath+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 source ~/.vim/vimrc.vundle
+call vundle#end()
 filetype plugin indent on
 
 source ~/.vim/vimrc.encoding
